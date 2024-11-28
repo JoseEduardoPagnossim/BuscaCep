@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name=" viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca por Endereço</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1> Busca CEP pelo Endereço</h1>
+        <form id="address-form">
+            <label for="state">Estado:</label>
+            <input type="text" id="state" placeholder="Ex: SP" maxlength="2" required>
+            <label for="city">Cidade:</label>
+            <input type="text" id="city" placeholder="Ex: São Paulo" required>
+            <label for="street">Rua:</label>
+            <input type="text" id="street" placeholder="Ex: Avenida Paulista" required>
+            <button type="submit">Pesquisar CEP</button>
+            <p><a href="index.html" style="color: #040404;">Voltar à consulta de CEP</a></p>
+        </form>
+        <div id="spinner" class="hidden">
+            <div class="loader"></div>
+            <p>Buscando...</p>
+        </div>
+        <p id="error-message" class="hidden" style="color: red; font-size: 14px;"></p>
+        <div id="result" class="hidden">
+            <h2>Resultado</h2>
+            <p><strong>CEP:</strong> <span id="cep"></span></p>
+        </div>
+    </div>
+    <footer>
+        <p>Desenvolvido por José Eduardo Pagnossim - © 2024</p>
+    </footer>
+    <script src="busca-endereco.js" defer></script>
+</body>
+</html>

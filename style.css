@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+  }
+  
+  .container {
+    max-width: 400px;
+    padding: 40px;
+    height: auto;
+    border-radius: 8px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: white;
+  }
+  
+  h1, h2, h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-align: center;
+  }
+
+  label {
+    font-weight: 700;
+    display: block;
+    margin: 5px;
+  }
+  
+
+  input,button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: auto;
+  }
+
+  input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+  }
+
+  button {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+  }
+
+  footer {
+    text-align: center; /* Centraliza o texto */
+    font-weight: bold;
+    padding: 0px; /* Espaçamento interno */
+    background-color: #f8f9fa; /* Fundo cinza claro */
+    font-size: 14px; /* Tamanho do texto */
+    color: #000000; /* Cor do texto */
+    position: fixed; /* Fixa o rodapé */
+    bottom: 0; /* Posiciona no final da página */
+    width: 100%; /* Ocupa toda a largura */
+    box-shadow: 20 10px 10px rgb(226, 222, 222); /* Sombra leve */
+  }
+  .hidden {
+    display: none;
+  }
+  
+  .loader {
+    border: 4px solid #f3f3f3; /* Fundo claro */
+    border-top: 4px solid #007bff; /* Azul forte para o arco giratório */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+
+  /* Animação do spinner */
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+  
+  #result {
+    background: #e6f7ff; /* Fundo azul claro para resultados */
+    border-left: 4px solid #007bff;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#error-message {
+  background: #ffebe6; /* Fundo vermelho claro para erros */
+  border-left: 4px solid #ff4d4f;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #d70000;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta de CEP</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/imask"></script> <!-- Biblioteca para máscara -->
+</head>
+<body>
+  <div class="container">
+    <h1>Consulta de CEP</h1>
+    <form id="cep-form">
+      <label for="cep">Digite o CEP:</label>
+      <input type="text" id="cep" maxlength="9" placeholder="Ex: 12345-678" required>
+      <button type="submit">Consultar</button>
+    </form>
+    <div id="spinner" class="hidden">
+      <div class="loader"></div>
+      <p>Buscando...</p>
+  </div>
+    <p id="error-message" class="hidden" style="color: red; font-size: 14px;"></p>
+    <div id="result" class="hidden">
+      <h2>Resultado:</h2>
+      <p><strong>Cidade:</strong> <span id="city"></span></p>
+      <p><strong>Bairro:</strong> <span id="neighborhood"></span></p>
+      <p><strong>Estado:</strong> <span id="state"></span></p>
+    </div>
+    <h3>Histórico de Consultas</h3>
+    <ul id="history-list"></ul>
+    <p><a href="busca-endereco.html" style="color: #000000;">Buscar CEP pelo endereço</a></p>
+  </div>
+  <footer>
+    <p>Desenvolvido por José Eduardo Pagnossim - © 2024</p>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
